@@ -1,0 +1,303 @@
+@font-face {
+    font-family: "SevenSegment";
+    src: url("ClassicMiniItalic7.woff") format('woff');
+}
+@font-face {
+    font-family: "CircularBold";
+    src: url("circularBold.woff2") format('woff');
+}
+@font-face {
+    font-family: "CircularSP";
+    src: url("CircularSP.woff2") format('woff');
+}
+hr {
+    margin-block-end: 10px;
+}
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    background-color: darkblue;
+}
+.column {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+.column-inline {
+    display: inline-block;
+    vertical-align: top;
+}
+.hide {
+    display: none !important;
+}
+.linehr {
+    height: 1px;
+    background-color: rgba(50,50,50,0.4);
+    margin-bottom: 11px;
+}
+.overlay-block {
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    border: 1px solid rgba(255,255,255, 0.18);
+    border-radius: 32px;
+}
+.sub-overlay {
+    position: absolute;
+    z-index: 20;
+    background: linear-gradient(135deg, rgb(255, 255, 255), rgb(200, 200, 200));
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.37);
+    border: 1px solid rgba(255,255,255, 0.18);
+    border-radius: 5px;
+}
+.blank-overlay {
+    position: absolute;
+    z-index: 20;
+}
+.top-right-overlay {
+    top: 20px;
+    right: 20px;
+    width: 170px;
+    height: 170px;
+    color: white;
+    font-family: CircularBold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+.calendar-name-overlay {
+    top: 10px;
+    right: 25px;
+    width: 120px;
+    height: 21px;
+    text-align: center;
+    padding-top: 2px;
+}
+.calendar-numbers-overlay {
+    top: 52px;
+    left: 14px;
+    width: 16px;
+    height: 180px;
+    text-align: right;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: white;
+}
+.bottom-right-overlay {
+    bottom: 20px;
+    right: 20px;
+    width: 170px;
+    height: 250px;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 80%);
+    font-family: CircularBold;
+    color: white;
+}
+.spotify-overlay {
+    bottom: 20px;
+    left: 20px;
+    width: 550px;
+    height: 190px;
+    font-family: CircularBold;
+    align-items: top;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+.seven-segment {
+    position: absolute;
+    right: 220px;
+    top: 35px;
+    font-family: SevenSegment;
+    font-size: 180px;
+    color: white;
+    text-shadow: 6px 6px rgba(0,0,0,0.5);
+    text-align: right;
+}
+.button-inactive {
+    fill: rgba(255,255,255,0.3);
+}
+.button-active {
+    fill: rgba(255,255,255,1);
+}
+.spotify-field {
+    max-width: 320px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.play-button {
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    border-radius: 48px;
+    color: #000;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    min-width: 48px;
+    position: relative;
+    width: 48px;
+}
+#shuffle-button {
+    align-items: center;
+    border: none;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    min-width: 48px;
+    position: relative;
+    width: 48px;
+    margin-left: -10px;
+}
+#loop-button {
+    align-items: center;
+    border: none;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    min-width: 48px;
+    position: relative;
+    width: 48px;
+}
+#loop-button2 {
+    align-items: center;
+    border: none;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    min-width: 48px;
+    position: relative;
+    width: 48px;
+    fill: rgba(255,255,255,1);
+}
+#spotify-image {
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+}
+.spotify-upnext {
+    margin-left: 65px;
+    margin-top: 30px;
+}
+#spotify-queue {
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+#progress-bar {
+    height: 4px;
+    width: 220px;
+    border-radius: 2px;
+    background-color: white;
+    margin-left: 60px;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+#spotify-name {
+    font-size: 22px;
+}
+#spotify-time {
+    position: relative;
+    left: -60px;
+    width: 50px;
+    top: -22px;
+    text-align: right;
+    font-family: CircularSP;
+}
+#spotify-length {
+    position: relative;
+    right: -230px;
+    width: 50px;
+    top: -44px;
+    font-family: CircularSP;
+}
+#spotify-progress {
+    position: relative;
+    left: 0px;
+    height: 12px;
+    width: 12px;
+    top: -4px;
+    border-radius: 6px;
+    background-color: white;
+}
+#calendar-top {
+    align-self: center;
+    width: min-content;
+    margin: auto;
+    margin-bottom: 17px;
+}
+#calendar-date {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+#calendar-weekday {
+    text-align: right;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.event-description {
+    font-size: 14px;
+    margin-left: 10px;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.event-time {
+    font-size: 11px;
+    margin-left: 20px;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.single-event {
+    margin-bottom: 6px;
+}
+.highlighted-event .event-description{
+    font-size: 21px;
+}
+.highlighted-event .event-time{
+    font-size: 14px;
+}
+.calendar-line {
+    margin: auto;
+    height: 3px;
+    width: auto;
+}
+#current-weather {
+    width: fit-content;
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#current-temp {
+    font-size: 60;
+    text-shadow: 1px 1px 2px rgb(0,0,0);
+}
+.small-temp {
+    font-size: 22;
+}
+.small-time {
+    font-size: 10;
+}
+.small-icon {
+    margin-top: -6px;
+    margin-bottom: -3px;
+}
+#future-weather {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+.weather-column {
+    width: 34px;
+}

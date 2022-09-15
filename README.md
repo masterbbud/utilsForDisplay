@@ -25,3 +25,6 @@ PIL
 sklearn
   * Data segmentation algorithm
   * Used with PIL to take the pixel data of an image and pull the most "important" colors
+
+Remaining TODO:
+Fix the queue system. Sometimes messages don't get pushed fast enough and get dropped. (in this case, we should skip).

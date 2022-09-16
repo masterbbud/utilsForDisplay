@@ -1,3 +1,5 @@
+import json
+import os
 from datetime import datetime
 from time import sleep
 
@@ -5,7 +7,10 @@ import requests
 
 from queue_manager import HTTPSQueue
 
-api_key = "dd24522e7b1545d3b32cc4d8e929606d"
+configFile = open(os.path.join(os.getcwd(),"config.json"),'r')
+config = json.load(configFile)
+
+api_key = config['weather_api']
 
 forecast_url = f"http://api.openweathermap.org/data/2.5/forecast?lat=43.08&lon=-77.67&appid={api_key}"
 current_url = f"http://api.openweathermap.org/data/2.5/weather?lat=43.08&lon=-77.67&appid={api_key}"

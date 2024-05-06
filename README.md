@@ -27,12 +27,12 @@ sklearn
   * Used with PIL to take the pixel data of an image and pull the most "important" colors
   
 To run, you must include a file config.json in the root directory that contains 4 keys:
-{
+```{
     "client_id": <spotify public client_id>,
     "client_secret": <spotify private client_secret>,
     "redirect_uri": "http://localhost:8080/callback",
     "weather_api": <openweatherapi private api key>
-}
+}```
 
 Remaining TODO:
 Fix the queue system. Sometimes messages don't get pushed fast enough and get dropped. (in this case, we should skip).

@@ -24,8 +24,10 @@ def setup():
 
     token = SpotifyOAuth(scope=scope,username=username,client_id=config['client_id'],client_secret=config['client_secret'],redirect_uri=config['redirect_uri'])
     
-    refresh_token = token.cache_handler.get_cached_token()["refresh_token"]
-    token.refresh_access_token(refresh_token)
+    res = token.cache_handler.get_cached_token()
+    if res:
+        refresh_token = res["refresh_token"]
+        token.refresh_access_token(refresh_token)
 
     spotifyObject = spotipy.Spotify(auth_manager = token)
 
@@ -46,7 +48,7 @@ def getPlaybackState():
     artists = ', '.join(artists)
     name = data.get('item', {}).get('name')
 
-    queue = spotifyObject.user_queue()
+    queue = spotifyObject.queue()
     newcover = None
     if queue and queue.get('queue'):
         newcover = queue.get('queue', [{}])[0].get('album', {}).get('images', [{}])[0].get('url')

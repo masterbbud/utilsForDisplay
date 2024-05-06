@@ -7,6 +7,7 @@ $( document ).ready(function() {
         let d = JSON.parse(event.data);
         for (let i = 0; i < d.length; i++) {
             let e = d[i];
+            console.log(e.updatetype);
             if (e.updatetype == 'mesh') {
                 document.getElementById('mesh').innerHTML = e.css;
             }

@@ -37,4 +37,4 @@ if __name__ == "__main__":
     spotify.setup()
     updateThreads = []
     HTTPSQueue()
-    app.run(debug=False)
+    app.run(port=5001, debug=False)

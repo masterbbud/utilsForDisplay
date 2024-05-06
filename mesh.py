@@ -12,7 +12,7 @@ from queue_manager import HTTPSQueue
 currentMesh = []
 numColors = 8
 count = 50
-colorspeed = 400 # how many seconds per cycle of perlin
+colorspeed = 100 # how many seconds per cycle of perlin
 moveweight = 200 # factor for move speed
 changeTime = 3 # seconds
 currentChange = None # seconds, up to changeTime

@@ -34,5 +34,11 @@ To run, you must include a file config.json in the root directory that contains 
     "weather_api": <openweatherapi private api key>
 }```
 
+Then, run:
+
+```
+python app.py
+```
+
 Remaining TODO:
 Fix the queue system. Sometimes messages don't get pushed fast enough and get dropped. (in this case, we should skip).
